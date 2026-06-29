@@ -1,0 +1,183 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Smart Milk Quality Analysis</title>
+    <link rel="stylesheet" href="project.css" />
+  </head>
+
+  <body>
+    <div class="sidebar">
+      <h2>🥛<br />Milk Analyzer</h2>
+
+      <div class="menu active">🏠 Dashboard</div>
+      <div class="menu">📡 Live Data</div>
+      <div class="menu">🕘 History</div>
+      <div class="menu">💬 SMS Logs</div>
+      <div class="menu">⚙ Settings</div>
+      <div class="menu">ⓘ About</div>
+
+      <div class="status">
+        <h3>System Status</h3>
+
+        🟢 All Systems Normal
+
+        <hr />
+
+        Device: ESP32<br />
+        Status: <span>Online</span><br />
+        Uptime: 02:15:30
+      </div>
+    </div>
+
+    <div class="main">
+      <header>
+        <h1>🥛 Smart Milk Quality Analysis System</h1>
+
+        <p>Real-time Milk Quality Monitoring and Pricing</p>
+
+        <div class="time">📅 25 May 2025 &nbsp; ⏱ 10:30:45 AM</div>
+      </header>
+
+      <h2>Live Milk Quality Data</h2>
+
+      <div class="cards">
+        <div class="card blue">
+          <h3>💧 FAT</h3>
+
+          <h1>4.25 %</h1>
+
+          <p>Good</p>
+        </div>
+
+        <div class="card green">
+          <h3>🌿 SNF</h3>
+
+          <h1>8.65 %</h1>
+
+          <p>Good</p>
+        </div>
+
+        <div class="card yellow">
+          <h3>💧 WATER</h3>
+
+          <h1>Not Detected</h1>
+
+          <p>Safe</p>
+        </div>
+
+        <div class="card purple">
+          <h3>🌡 TEMPERATURE</h3>
+
+          <h1>27.3 °C</h1>
+
+          <p>Normal</p>
+        </div>
+
+        <div class="card red">
+          <h3>₹ MILK PRICE</h3>
+
+          <h1>₹ 50.60</h1>
+
+          <p>Per Liter</p>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="tablebox">
+          <h2>Recent Readings</h2>
+
+          <table>
+            <tr>
+              <th>Time</th>
+              <th>Fat</th>
+              <th>SNF</th>
+              <th>Water</th>
+              <th>Temp</th>
+              <th>Price</th>
+              <th>Status</th>
+            </tr>
+
+            <tr>
+              <td>10:30 AM</td>
+              <td>4.25</td>
+              <td>8.65</td>
+              <td>Not Detected</td>
+              <td>27.3</td>
+              <td>50.60</td>
+              <td class="ok">Good</td>
+            </tr>
+
+            <tr>
+              <td>10:15 AM</td>
+              <td>4.18</td>
+              <td>8.50</td>
+              <td>Not Detected</td>
+              <td>27.1</td>
+              <td>49.80</td>
+              <td class="ok">Good</td>
+            </tr>
+
+            <tr>
+              <td>09:45 AM</td>
+              <td>4.60</td>
+              <td>8.90</td>
+              <td class="bad">Detected</td>
+              <td>27.5</td>
+              <td>52.80</td>
+              <td class="alert">Alert</td>
+            </tr>
+          </table>
+
+          <button onclick="historyData()">View All History ➜</button>
+        </div>
+
+        <div class="right">
+          <div class="sms">
+            <h2>Send Data to Customer (SMS)</h2>
+
+            <input id="num" placeholder="Enter Email" />
+
+            <button onclick="sendReport()">Send Report</button>
+
+            <h3>Quick Message Preview</h3>
+
+            <p>
+              Milk Report (25-05-2025 10:30 AM)
+
+              <br /><br />
+
+              Fat: 4.25% | SNF: 8.65%
+
+              <br />
+
+              Water: Not Detected
+
+              <br />
+
+              Temp: 27.3°C | Price: ₹50.60/L
+
+              <br />
+
+              Quality: Good
+            </p>
+          </div>
+
+          <div class="alertbox">
+            🔔 Alerts
+
+            <br /><br />
+
+            🟢 No new alerts
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        © 2025 Smart Milk Quality Analysis System | Developed with ❤️ using
+        ESP32 & IoT
+      </footer>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="module" src="project.js"></script>
+  </body>
+</html>

@@ -1,6 +1,6 @@
 
-from pypdf import PdfReader
-from pathlib import Path
+from pypdf import PdfReader  #brings a tool that knows how to open PDF files and read their pages
+from pathlib import Path  #
 
 
 # Display the main menu
